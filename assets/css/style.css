@@ -145,6 +145,17 @@ header.bg-light {
   align-items: center;
 }
 
+#home #hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1c1c1c4a;
+  z-index: 0;
+}
+
 #home #hero .content {
   max-width: 600px;
   display: flex;
@@ -219,4 +230,9 @@ header.bg-light {
     opacity: 0;
     top: 50%;
   }
+}
+
+#home .content,
+#home .scroll-down {
+  z-index: 1;
 }
