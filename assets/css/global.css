@@ -1,3 +1,9 @@
+:root {
+  --section-padding: 100px;
+  --primary-color: 174 151 104;
+  --secondary-color: 224 220 210;
+}
+
 *,
 *::before,
 *::after {
@@ -64,4 +70,38 @@ img {
   .container {
     width: 1170px;
   }
+}
+
+.bg-primary {
+  background-color: rgb(var(--primary-color));
+}
+
+button {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: 600;
+}
+
+button.bg-primary {
+  background-color: rgb(var(--primary-color));
+  border: 1px solid transparent;
+}
+
+button.bg-trans {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+button.bg-primary:hover {
+  background-color: #fff;
+  color: #303030;
+}
+button.bg-trans:hover {
+  background-color: #fff;
+  color: #303030;
 }
