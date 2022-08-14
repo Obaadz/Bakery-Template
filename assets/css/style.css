@@ -58,7 +58,7 @@ header .navbar ul {
 
 header .navbar ul li {
   padding-top: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   border-top: 3px solid transparent;
 }
 
@@ -103,11 +103,12 @@ header .navbar ul li:not(.active) a:hover {
     z-index: -1;
     overflow: hidden;
     max-height: 1px;
-    transition: max-height 0.7s ease-out;
+    transition: max-height 0.7s ease-out, box-shadow 0.5s;
   }
 
   header .menu[show] ~ .navbar {
     max-height: 500px;
+    box-shadow: 0px 4px 8px 0px #00000010;
   }
 
   header .navbar ul {
@@ -232,7 +233,68 @@ header.bg-light {
   }
 }
 
-#home .content,
-#home .scroll-down {
+#home #hero .content,
+#home #hero .scroll-down {
   z-index: 1;
+}
+/* who_we */
+#who_we {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+#who_we .content {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 50px;
+}
+
+@media (max-width: 767px) {
+  #who_we .content {
+    grid-template-columns: auto;
+  }
+}
+
+#who_we .content .image {
+  align-self: center;
+}
+
+#who_we .content .text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  color: rgb(var(--text-accent));
+}
+
+#who_we .content .text h2 {
+  color: rgb(var(--text-primary));
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+#who_we .content .text p {
+  line-height: 1.6;
+}
+
+#who_we .content .text .icons-wrapper {
+  display: grid;
+  gap: 25px;
+}
+
+#who_we .content .text .icons-wrapper .icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#who_we .content .text .icons-wrapper .icon i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: rgb(var(--primary-color));
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
 }
