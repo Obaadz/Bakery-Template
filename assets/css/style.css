@@ -234,15 +234,17 @@ header.bg-light {
   z-index: 1;
 }
 
-/* who_we & our_location sections*/
+/* who_we & our_location & contact_information sections*/
 #who_we,
-#our_location {
+#our_location,
+#contact_information {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
 }
 
 #who_we .content,
-#our_location .content {
+#our_location .content,
+#contact_information .content {
   display: grid;
   grid-template-columns: auto auto;
   gap: 50px;
@@ -250,18 +252,21 @@ header.bg-light {
 
 @media (max-width: 767px) {
   #who_we .content,
-  #our_location .content {
+  #our_location .content,
+  #contact_information .content {
     grid-template-columns: auto;
   }
 }
 
 #who_we .content .image,
-#our_location .content .image {
+#our_location .content .image,
+#contact_information .content image {
   align-self: center;
 }
 
 #who_we .content .text,
-#our_location .content .text {
+#our_location .content .text,
+#contact_information .content .text {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -270,29 +275,34 @@ header.bg-light {
 }
 
 #who_we .content .text h2,
-#our_location .content .text h2 {
+#our_location .content .text h2,
+#contact_information .content .text h2 {
   color: rgb(var(--text-primary));
   font-size: 2rem;
   font-weight: normal;
 }
 
 #who_we .content .text p,
-#our_location .content .text p {
+#our_location .content .text p,
+#contact_information .text p {
   line-height: 1.6;
 }
 
-#who_we .content .text .icons-wrapper {
+#who_we .content .text .icons-wrapper,
+#contact_information .content .text .icons-wrapper {
   display: grid;
   gap: 25px;
 }
 
-#who_we .content .text .icons-wrapper .icon {
+#who_we .content .text .icons-wrapper .icon,
+#contact_information .content .text .icons-wrapper .icon {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-#who_we .content .text .icons-wrapper .icon i {
+#who_we .content .text .icons-wrapper .icon i,
+#contact_information .text .icons-wrapper .icon i {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -358,4 +368,21 @@ header.bg-light {
 
 #our_baking .content .row h3 {
   margin: 20px 0 10px;
+}
+
+/* contact information section */
+#contact_information {
+  background-color: #f8f8f8;
+}
+
+#contact_information .content h3 {
+  color: rgb(var(--text-primary));
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+  #contact_information .content iframe {
+    width: 100%;
+  }
 }
